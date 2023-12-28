@@ -1,5 +1,7 @@
 E-Commerce Website
+
 Introduction
+
 This repository contains the source code for an E-Commerce website (Attire Avenue) that allows users to register, log in, and explore different clothing sections for men, women, and children. The website also features an "About Us" section with details about the company and its employees, as well as a "Contact Us" page where users can send messages or queries.
 
 Features
