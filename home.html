@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./assets/images/white-logo.png">
+    <title>AttireAvenue</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/AttireAvenue.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+</head>
+
+<script>
+    function isUserLoggedIn() {
+        return true;
+    }
+
+    function logout() {
+        window.location.href = "index.html";
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (isUserLoggedIn()) {
+            const profileSection = document.querySelector('.profile-section');
+            profileSection.style.display = 'flex';
+        }
+    });
+</script>
+
+<body>
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/white-logo.png">
+                        </a>
+
+                        <ul class="nav" id="navList">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Men's</a></li>
+                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="products.html">Product</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="about.html">About Us</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="contact.html">Contact Us</a></li>
+                            <li class="profile-section" style="display: none;">
+                                <div class="profile-pic" onclick="toggleLogout()">
+                                    <!-- Call the toggleLogout function on click -->
+                                    <!-- Add your profile picture here -->
+                                    <img src="assets/images/profile.png" title="Profile" alt="Profile Picture"
+                                        onclick="logout()">
+                                </div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header End -->
+
+    <!-- Main Banner -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>We Are AttireAvenue</h4>
+                                <span>we Bring new Collection Every time that are designed for the new Generation</span>
+                                <div class="main-border-button">
+                                    <a href="about.html">Know More About Us</a>
+                                </div>
+                            </div>
+                            <img src="assets/images/left-banner-image.jpg" alt="Image Unavailable">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Women</h4>
+                                            <span>Trending Clothes For Women</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <!-- <h4>Women</h4> -->
+                                                <p>Trending clothes include oversized blazers,flowy maxi dresses and
+                                                    high-waisted trousers.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#women">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-01.jpg" alt="Image Unavailable">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Men</h4>
+                                            <span>Trending Clothes For Men</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <!-- <h4>Men</h4> -->
+                                                <p>Trending clothes include oversized shirts, cargo pants,graphic
+                                                    tees,and sneakers.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#men">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-02.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Kids</h4>
+                                            <span>Trending Clothes For Kids</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <!-- <h4>Kids</h4> -->
+                                                <p>Trending clothes for kids include gender-neutral clothing, and
+                                                    vibrant colors.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#kids">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-03.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Accessories</h4>
+                                            <span>Best Trending Accessories</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <!-- <h4>Accessories</h4> -->
+                                                <p>Accessories are the game-changers.From bold chunky chains to
+                                                    eco-conscious choices.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-04.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Banner -->
+
+    <!-- Men Area -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Men's Latest</h2>
+                        <span>Trending clothes for men are all about embracing comfort and style.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/men-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>&#8377; 1200.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/men-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Air Force 1</h4>
+                                    <span>&#8377; 900.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/men-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Love Nana '20</h4>
+                                    <span>&#8377; 1500.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/men-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>&#8377; 1000.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Women Area Starts ***** -->
+    <section class="section" id="women">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Women's Latest</h2>
+                        <span>Trending clothes for women this season include oversized blazers, flowy maxi dresses,
+                            tailored high-waisted trousers.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="women-item-carousel">
+                        <div class="owl-women-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/women-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>New Green Jacket</h4>
+                                    <span>&#8377; 750.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/women-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Dress</h4>
+                                    <span>&#8377; 450.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/women-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Spring Collection</h4>
+                                    <span>&#8377;1300.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="assets/images/women-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>&#8377;1200.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Women Area Ends ***** -->
+
+    <!-- ***** Kids Area Starts ***** -->
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Kid's Latest</h2>
+                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/kid-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>School Collection</h4>
+                                    <span>&#8377;800.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/kid-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Summer Cap</h4>
+                                    <span>&#8377;420.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/kid-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Kid</h4>
+                                    <span>&#8377;300.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <!-- <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <img src="assets/images/kid-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>&#8377;1200.00</span>
+                                    <input class="cart" type="button" value="Add to cart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Kids Area Ends ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>Explore Our Products</h2>
+                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or
+                            edit this layout. You can convert this template as any kind of ecommerce CMS theme as you
+                            wish.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                        </div>
+                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for
+                            absolutely free of charge at our TemplateMo website. There are web development costs for us.
+                        </p>
+                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow"
+                                href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.
+                            Please also tell your friends about our great website. Thank you.</p>
+                        <div class="main-border-button">
+                            <a href="products.html">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>Leather Bags</h4>
+                                    <span>Latest Collection</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="first-image">
+                                    <img src="assets/images/explore-image-01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="second-image">
+                                    <img src="assets/images/explore-image-02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="types">
+                                    <h4>Different Types</h4>
+                                    <span>Over 304 Products</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Reviews Area Starts ***** -->
+    <section class="section" id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Review & Testimonials</h2>
+                        <span>Here are some reviews or Testimonials which can help you to make your mind about the
+                            AttireAvenue and help you to decide about your purchase.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-card">
+            <div class="card" style="width: 18.5rem;">
+                <img class="card-img-top" src="./assets/images/kid-03.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Akash Tiwari</h5>
+                    <ul>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <!-- <li class="fa fa-star"></li> -->
+                    </ul>
+                    <p class="card-text">
+                        I recently shopped on this ecommerce website, and the experience was fantastic. The website's
+                        user-friendly interface made my browsing and purchasing a breeze. The product I ordered, a pair
+                        of shoes, exceeded my expectations in terms of quality and comfort. I'll definitely be back for
+                        more!
+                    </p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 18.5rem;">
+                <img class="card-img-top" src="./assets/images/kid-01.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Raj dubey</h5>
+                    <ul>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                    <p class="card-text">I can't say enough about the exceptional customer service on this ecommerce
+                        platform. They promptly addressed my concerns, and my order arrived in perfect condition. The
+                        dress I purchased was not only stylish but also made from sustainable materials, which is a huge
+                        plus. Great shopping experience!.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18.5rem;">
+                <img class="card-img-top" src="./assets/images/kid-02.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Adarsh Raj</h5>
+                    <ul>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                    <p class="card-text">I'm a repeat customer because this ecommerce website consistently delivers
+                        high-quality products. I recently purchased a smartwatch. Theirproduct descriptions are
+                        accurate,
+                        and the prices are competitive. I trust this platform for all my fashion and tech needs. This
+                        platform is well verse for all the Fashion need</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18.5rem;">
+                <img class="card-img-top" src="./assets/images/kid-03.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Ankit Giri</h5>
+                    <ul>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                    <p class="card-text">I am thrilled with my recent purchase of a cozy winter coat from this ecommerce
+                        site. The product arrived in a timely manner and was exactly as described. The warmth and style
+                        of this coat have made it a staple in my winter wardrobe. I highly recommend both the website
+                        and their products!.</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="row images">
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Fashion</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>New</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Brand</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Makeup</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-04.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Leather</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-05.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Bag</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-06.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <!-- ***** Social Area Ends ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <!-- <ul>
+                            <li><a href="#">B-108, Mubrakpur, marhara(saran), Bihar - 841418</a></li>
+                            <li><a href="#">diwakargiri23@gmail.com</a></li>
+                            <li><a href="#">+91 7488081301</a></li>
+                        </ul> -->
+                        <ul>
+                            <li><a href="#">68 near hanuman mandir, Kharde bk.shirpur</a></li>
+                            <li><a href="#">patilsamadhan0099@gmail.com</a></li>
+                            <li><a href="#">+91 9284822353</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#men">Men's Shopping</a></li>
+                        <li><a href="#women">Women's Shopping</a></li>
+                        <li><a href="#kids">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2023 AttireAvenue Co. Ltd. All Rights Reserved.
+
+                            <!-- <br>Designed By: <a href="www.linkedin.com/in/diwakarg12/" target="_blank"
+                                title="Linkedin">Diwakar Giri</a> -->
+                        </p>
+                        <!-- <ul>
+                            <li><a href="https://www.facebook.com/diwakar.giri.792" target="_blank"
+                                    title="AttireAvenue's Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank" title="AttireAvenue's Youtube"><i
+                                        class="fa fa-youtube"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/diwakarg12/" title="AttireAvenue's Linkedin"
+                                    target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/mr._diwakar_011/" target="_blank"
+                                    title="AttireAvenue's Instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <!-- firebase database script -->
+    <script src="assets/js/firebase1.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+    <!-- <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+        import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+        import { getAuth, authStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+
+        const logout = document.getElementById("logout").value;
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBVz42n1vsbHP_ljJWuJsy49Mvg_ScObOM",
+            authDomain: "ecommerceapp-76cf4.firebaseapp.com",
+            databaseURL: "https://ecommerceapp-76cf4-default-rtdb.firebaseio.com",
+            projectId: "ecommerceapp-76cf4",
+            storageBucket: "ecommerceapp-76cf4.appspot.com",
+            messagingSenderId: "79109426351",
+            appId: "1:79109426351:web:169e482781e189319cd85a",
+            measurementId: "G-GJL46J9QRX"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        logout.addEventListener("click", (e) => {
+            signOut(auth).then(() => {
+                alert("User Logged Out");
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+
+        });
+
+    </script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/white-logo.png">
+    <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/white-logo.png">
+                        </a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a target="_blank" href="home.html">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Men's</a></li>
+                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="about.html">About Us</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="contact.html">Contact Us</a></li>
+                            <li class="scroll-to-section"><a href="registration.html">SignUp</a></li>
+                            <li class="scroll-to-section"><a href="login.html" class="active">Login</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <section class="container1 forms">
+        <div class="form login">
+            <div class="form-content">
+                <div class="alert alert-success" role="alert" style="display: none;">
+                    Login Sucessfully!!
+                </div>
+                <header>Login Here</header>
+                <form action="" id="logForm" method="POST">
+                    <div class="field input-field">
+                        <input type="email" id="email" name="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" id="password" name="password" placeholder="Password" class="password">
+                    </div>
+
+                    <div class="form-link">
+                        <a href="registration.html" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <input type="submit" id="signin" class="button" value="submit">
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Don't have an account? <a href="registration.php" class="link signup-link">Signup</a></span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--
+<?php
+
+// session_start();
+
+// // Check if the user is already logged in
+// if (isset($_SESSION['logged']) && $_SESSION['logged']) {
+//     // Redirect to home if already logged in
+//     header('Location: home.html');
+//     exit();
+// }
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "attireavenue";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // SQL query to retrieve user data based on the provided email
+    $stmt = $conn->prepare("SELECT * FROM userdata WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
+        // User found, check the password
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password'])) {
+            // Password is correct, user is logged in
+            echo '<script>alert(Login sucessfully!!);</script>';
+            session_start();
+            $_SESSION['logged']=true;
+            header('Location: home.html');
+            exit();
+            // You can set session variables or perform other actions for a logged-in user
+        } else {
+            // Password is incorrect
+            echo '<script>
+            const alert = document.querySelector(".alert");
+            alert.innerHTML="Incorrect Email/Password! Please try again.";
+            alert.style.backgroundColor = "red";
+            alert.style.display = "block";
+                    setTimeout(()=>{
+                        alert.style.display = "none";
+                    }, 3000);
+            </script>';
+        }
+    } else {
+        // User with the provided email not found
+        echo '<script>
+            const alert = document.querySelector(".alert");
+            alert.innerHTML="User not found";
+            alert.style.backgroundColor = "red";
+            alert.style.display = "block";
+                    setTimeout(()=>{
+                        alert.style.display = "none";
+                    }, 3000);
+            </script>';
+    }
+}
+
+// Close the database connection
+$conn->close();
+?>
+-->
+
+    <!-- <script type="module">
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+    import {getDatabase, ref, update} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+    import {getAuth, signInWithEmailAndPassword, authStateChanged} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+        
+    const signin = document.getElementById("signin");
+    const alerted = document.querySelector(".alert");
+        
+    const firebaseConfig = {
+        apiKey: "AIzaSyBVz42n1vsbHP_ljJWuJsy49Mvg_ScObOM",
+        authDomain: "ecommerceapp-76cf4.firebaseapp.com",
+        databaseURL: "https://ecommerceapp-76cf4-default-rtdb.firebaseio.com",
+        projectId: "ecommerceapp-76cf4",
+        storageBucket: "ecommerceapp-76cf4.appspot.com",
+        messagingSenderId: "79109426351",
+        appId: "1:79109426351:web:169e482781e189319cd85a",
+        measurementId: "G-GJL46J9QRX"
+    };
+        
+     // Initialize Firebase
+     const app =initializeApp(firebaseConfig);
+     const database = getDatabase(app);
+     const auth = getAuth();
+        
+    signin.addEventListener("click", (e) => {
+        
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+                
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) =>{
+            const user = userCredential.user;
+                    
+            const dt = new Date();
+            update(ref(database, 'users/' + user.uid),{
+                last_login: dt,
+            })
+
+            alerted.style.display = "block";
+            setTimeout(()=>{
+                alerted.style.display = "none";
+            }, 3000);
+            window.location.href = "index.html";
+        })
+        .catch((error)=>{
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alerted.innerHTML = errorMessage;
+            alerted.style.backgroundColor = "red";
+            alerted.style.display = "block";
+            setTimeout(()=>{
+                alerted.style.display = "none";
+            }, 3000);
+        
+        });
+    });
+
+    const user = auth.currentUser;
+    onAuthStateChanged(auth, (user)=>{
+        if(user){
+
+            const uid = user.uid;
+        }else{
+
+        }
+    });
+        
+</script> -->
+
+</body>
+
+</html>
